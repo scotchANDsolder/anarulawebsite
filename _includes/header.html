@@ -29,3 +29,27 @@
     {%- endif -%}
   </div>
 </header>
+
+
+<script
+
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.filter-button');
+  const items = document.querySelectorAll('.grid-item');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category');
+
+      items.forEach(item => {
+        const itemCategories = item.getAttribute('data-categories').split(' ');
+        if (category === 'all' || itemCategories.includes(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>

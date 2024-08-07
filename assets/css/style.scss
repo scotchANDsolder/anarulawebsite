@@ -5,3 +5,34 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+
+  
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+.grid-item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.filter-container {
+  margin-bottom: 20px;
+}
+.filter-button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
